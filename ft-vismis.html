@@ -12,13 +12,18 @@
 			rel="stylesheet"
 		/>
 		<script
+			src="include/components/header-tw.js"
+			type="text/javascript"
+			defer
+		></script>
+		<script
 			src="include/components/footer-tw.js"
 			type="text/javascript"
 			defer
 		></script>
 	</head>
 	<body>
-		<div id="nav-placeholder" class="fixed w-full top-0"></div>
+		<header-component class="fixed w-full top-0"></header-component>
 
 		<div
 			style="background-image: url(assets/img/fakultas/teknik_1024.png)"
@@ -92,9 +97,4 @@
 		</div>
 		<footer-component />
 	</body>
-	<script>
-		$(function () {
-			$("#nav-placeholder").load("include/components/navbar.html");
-		});
-	</script>
 </html>

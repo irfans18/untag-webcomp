@@ -12,17 +12,22 @@
 			rel="stylesheet"
 		/>
 		<script
+			src="include/components/header-tw.js"
+			type="text/javascript"
+			defer
+		></script>
+		<script
 			src="include/components/footer-tw.js"
 			type="text/javascript"
 			defer
 		></script>
 	</head>
 	<body>
-		<div id="nav-placeholder" class="fixed w-full top-0"></div>
+		<header-component class="fixed w-full top-0"></header-component>
 
 		<div
 			style="background-image: url(assets/img/fakultas/hukum_1024.png)"
-			class="w-auto h-80 bg-red-800 bg-cover flex items-end"
+			class="w-auto h-80 bg-red-900 bg-cover flex items-end"
 		>
 			<div class="text-start">
 				<h1
@@ -100,9 +105,4 @@
 		</div>
 		<footer-component />
 	</body>
-	<script>
-		$(function () {
-			$("#nav-placeholder").load("include/components/navbar.html");
-		});
-	</script>
 </html>

@@ -225,7 +225,7 @@ footerTemplate.innerHTML = `
                <nav
                   class="flex lg:flex-row flex-col items-center text-base font-light justify-center"
                >
-                  <p>Copyright © 2021 Analystic Max</p>
+                  <p>Copyright © 2022 Universitas 17 Agustus 1945</p>
                </nav>
             </div>
          </div>
