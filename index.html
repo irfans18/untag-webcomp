@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fakultas Teknik • UNTAG-SMD</title>
+		<title>UNTAG Samarinda</title>
 		<link rel="icon" href="assets/img/logo.png" />
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="include/js/jquery-3.0.0.js"></script>
@@ -21,11 +21,322 @@
 			type="text/javascript"
 			defer
 		></script>
+		<style>
+			.profile {
+				background-image: url(assets/img/universitas/Group\ 33.png);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				height: 100vh;
+			}
+			.carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked
+				~ .control-1
+				~ .carousel-indicators
+				li:nth-child(1)
+				.carousel-bullet,
+			#carousel-2:checked
+				~ .control-2
+				~ .carousel-indicators
+				li:nth-child(2)
+				.carousel-bullet,
+			#carousel-3:checked
+				~ .control-3
+				~ .carousel-indicators
+				li:nth-child(3)
+				.carousel-bullet {
+				color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
+			}
+		</style>
 	</head>
 	<body>
-		<header-component class="fixed w-full top-0"></header-component>
+		<header-component
+			class="fixed w-full top-0"
+			style="z-index: 100"
+		></header-component>
+		<div class="carousel relative shadow-sm bg-white mt-16">
+			<div class="carousel-inner relative overflow-hidden w-full">
+				<!--Slide 1-->
+				<input
+					class="carousel-open"
+					type="radio"
+					id="carousel-1"
+					name="carousel"
+					aria-hidden="true"
+					hidden=""
+					checked="checked"
+				/>
+				<div class="carousel-item absolute opacity-0" style="height: 100vh">
+					<div
+						class="block h-full w-full bg-cover text-white text-5xl text-center"
+						style="
+							background-image: url(assets/img/universitas/untag_indonesia.png);
+						"
+					>
+						Slide 1
+					</div>
+				</div>
+				<label
+					for="carousel-2"
+					class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"
+				>
+					›
+				</label>
+
+				<!--Slide 2-->
+				<input
+					class="carousel-open"
+					type="radio"
+					id="carousel-2"
+					name="carousel"
+					aria-hidden="true"
+					hidden=""
+				/>
+				<div class="carousel-item absolute opacity-0" style="height: 100vh">
+					<div
+						class="block h-full w-full bg-cover text-white text-5xl text-center"
+						style="
+							background-image: url(assets/img/universitas/UNTAG.png);
+						"
+					>
+						Slide 2
+					</div>
+				</div>
+				<label
+					for="carousel-1"
+					class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"
+				>
+					‹
+				</label>
+
+				<!-- Add additional indicators for each slide-->
+				<ol class="carousel-indicators">
+					<li class="inline-block mr-3">
+						<label
+							for="carousel-1"
+							class="carousel-bullet cursor-pointer block text-4xl text-gray-300 hover:text-blue-700"
+						>
+							•
+						</label>
+					</li>
+					<li class="inline-block mr-3">
+						<label
+							for="carousel-2"
+							class="carousel-bullet cursor-pointer block text-4xl text-gray-300 hover:text-blue-700"
+						>
+							•
+						</label>
+					</li>
+				</ol>
+			</div>
+		</div>
+
 		<main>
-			<!-- Your page's content -->
+			<div class="mx-32 mt-16">
+				<!-- feature -->
+				<div class="flex flex-col">
+					<div
+						class="py-10 flex flex-nowrap md:space-x-16 2xl:space-x-28 justify-center"
+					>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/key.png"
+									alt="SIAKAD"
+									class="w-16"
+								/>
+							</div>
+							<span>SIAKAD</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/gear.png"
+									alt="E-LEARNING"
+									class="w-16"
+								/>
+							</div>
+							<span>E-LEARNING</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/book.png"
+									alt="E-JOURNAL"
+									class="w-16"
+								/>
+							</div>
+							<span>E-JOURNAL</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/paper.png"
+									alt="CONTOH JOURNAL"
+									class="w-16"
+								/>
+							</div>
+							<span>CONTOH JOURNAL</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/mobile.png"
+									alt="SIAKAD MOBILE"
+									class="w-16"
+								/>
+							</div>
+							<span>SIAKAD MOBILE</span>
+						</div>
+					</div>
+					<div
+						class="py-10 flex flex-nowrap md:space-x-20 2xl:space-x-32 justify-center"
+					>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/bag.png"
+									alt="PUSAKA"
+									class="w-16"
+								/>
+							</div>
+							<span>PUSAKA</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/monitor.png"
+									alt="MONITOR"
+									class="w-16"
+								/>
+							</div>
+							<span>MONITOR</span>
+						</div>
+						<div>
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/profile.png"
+									alt="PORTAL PMB"
+									class="w-16"
+								/>
+							</div>
+							<span>PORTAL PMB</span>
+						</div>
+						<div class="">
+							<div class="flex justify-center items-center">
+								<img
+									src="assets/icon/web.png"
+									alt="TRACER STUDY"
+									class="w-16 justify-self-center"
+								/>
+							</div>
+							<span>TRACER STUDY</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- news -->
+				<div class="mt-24 md:mx-32 2xl:mx-48">
+					<h1
+						class="text-xl md:text-3xl 2xl:text-4xl font-semibold underline"
+					>
+						Berita UNTAG
+					</h1>
+
+					<div class="flex justify-center my-8">
+						<div class="px-4 w-full">
+							<img
+								src="assets/img/berita/MOU_HKTI.jpg"
+								alt=""
+								class="bg-cover w-full h-full"
+							/>
+						</div>
+						<div class="text-start text-justify">
+							<span class="font-bold">17 Maret 2022 08:44:19</span>
+							<h2 class="text-red-500 text-lg font-semibold uppercase">
+								Kerjasama Fakultas Teknik UNTAGSMD dengan Fakultas
+								Teknik Univ Bosowa
+							</h2>
+							<p
+								class="text-sm text-gray-600 text-ellipsis overflow-hidden"
+							>
+								Kerjasama Fakultas Teknik Universitas 17 Agustus 1945
+								Samarinda dengan Fakultas Teknik Universitas Bosowa
+								Makassar dalam bidang pendidikan, penelitian dan
+								pengabdian masyarakat untuk menunjang merdeka belajar
+								kampus merdeka (MBKM) kedua Fakultas.
+							</p>
+						</div>
+					</div>
+					<div class="flex justify-center my-8">
+						<div class="px-4 w-full">
+							<img
+								src="assets/img/berita/MOU_HKTI.jpg"
+								alt=""
+								class="bg-cover w-full h-full"
+							/>
+						</div>
+						<div class="text-start text-justify">
+							<span class="font-bold">16 Maret 2022 14:49:08</span>
+							<h2 class="text-red-500 text-lg font-semibold uppercase">
+								Kerjasama Dengan Universitas Bosowa
+							</h2>
+							<p
+								class="text-sm text-gray-600 text-ellipsis overflow-hidden"
+							>
+								Kerjasama Universitas 17 Agustus 1945 Samarinda dengan
+								Universitas Bosowa pada hari ini di Ruang Rapat 2 Lt 2
+								Universitas 17 Agustus 1945 Samarinda. Kerjasama dalam
+								bidang Tri Dharma Perguruan Tinggi dan Merdeka Belajar
+								Kampus Merdeka (MBKM).
+							</p>
+						</div>
+					</div>
+					<hr />
+				</div>
+			</div>
+			<!-- profile -->
+			<div class="">
+				<h1
+					class="my-8 md:mx-64 2xl:mx-96 text-xl md:text-3xl 2xl:text-4xl font-semibold underline"
+				>
+					Profil UNTAG
+				</h1>
+
+				<div class="profile bg-red-900 flex justify-center items-center">
+					<iframe
+						class="h-3/4 w-3/5"
+						src="https://www.youtube.com/embed/DNUCat8OPDU"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
 		</main>
 		<footer-component />
 	</body>

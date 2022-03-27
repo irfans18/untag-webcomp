@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fakultas Psikologi • UNTAG-SMD</title>
-		<link rel="icon" href="assets/img/logo.png" />
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="include/js/jquery-3.0.0.js"></script>
+		<title>Navbar</title>
 		<link
-			href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
+			href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
 			rel="stylesheet"
 		/>
-		<script
-			src="include/components/header-tw.js"
-			type="text/javascript"
-			defer
-		></script>
-		<script
-			src="include/components/footer-tw.js"
-			type="text/javascript"
-			defer
-		></script>
+		<link href="include/css/tailwind.css" rel="stylesheet" />
+
+		<style>
+			/* #Mega Menu Styles
+         –––––––––––––––––––––––––––––––––––––––––––––––––– */
+			.mega-menu {
+				display: none;
+				left: 0;
+				position: absolute;
+				text-align: left;
+				width: 100%;
+			}
+
+			.normal-menu {
+				display: none;
+				/* left: 0; */
+				position: absolute;
+				text-align: left;
+				width: 386px;
+			}
+
+			/* #hoverable Class Styles
+         –––––––––––––––––––––––––––––––––––––––––––––––––– */
+			.hoverable {
+				position: static;
+			}
+
+			.hoverable > a:after {
+				content: "\25BC";
+				font-size: 10px;
+				padding-left: 6px;
+				position: relative;
+				top: -1px;
+			}
+
+			.hoverable:hover .mega-menu {
+				display: block;
+			}
+
+			.hoverable:hover .normal-menu {
+				display: block;
+			}
+		</style>
 	</head>
 	<body>
+		<!-- <footer class="footer-2-1" style="font-family: 'Poppins', sans-serif"> -->
 		<header>
 			<nav
 				class="px-6 py-2 shadow-md md:flex"
@@ -33,7 +65,7 @@
 					<div
 						class="text-3xl text-gray-800 font-bold hover:text-gray-800"
 					>
-						<a href="index.html" class="flex items-center">
+						<a href="#" class="flex items-center">
 							<div class="flex md:block text-center ml-2 py-1">
 								<div class="flex block items-center">
 									<img
@@ -75,13 +107,13 @@
 				>
 					<div class="flex flex-col px-2 md:flex-row">
 						<a
-							href="psikologi-home.html"
+							href="#"
 							class="py-2 px-2 text-white font-medium hover:text-gray-300 md:mx-2"
 						>
 							Beranda
 						</a>
 						<a
-							href="psikologi-vismis.html"
+							href="#"
 							class="py-2 px-2 text-white font-medium hover:text-gray-300 md:mx-2"
 						>
 							Visi Misi
@@ -116,79 +148,5 @@
 				</div>
 			</nav>
 		</header>
-		<div
-			style="background-image: url(assets/img/fakultas/psikologi_1024.png)"
-			class="w-auto h-80 bg-red-900 bg-cover flex justify-center items-center"
-		>
-			<div class="text-start">
-				<h1
-					class="text-xl md:text-5xl text-white font-bold mx-6 md:mx-32 mb-4"
-				>
-					Fakultas Psikologi
-				</h1>
-			</div>
-		</div>
-		<main>
-			<div class="mt-6 md:mt-20 mx-6 md:mx-40">
-				<!-- <div class="flex justify-center my-6">
-				<img
-					class="w-32 md:w-60 mt-3"
-					src="img/untag.png"
-					alt="Logo UNTAG"
-				/>
-			</div> -->
-
-				<div class="py-6 text-justify">
-					<div>
-						<h1 class="font-bold text-xl">Visi</h1>
-						<p class="p-2">
-							Menjadi Program Studi yang unggul, mandiri, dan berjiwa
-							kebangsaan di Indonesia Timur pada tahun 2020
-						</p>
-					</div>
-
-					<div class="mt-4">
-						<h1 class="font-bold text-xl">Misi</h1>
-						<ol class="list-decimal list-outside px-6 py-4">
-							<li class="py-1">
-								Menyelenggarakan pendidikan, pengajaran, penelitian dan
-								pengabdian masyarakat yang berdaya saing sesuai
-								kebutuhan stakeholder.
-							</li>
-							<li class="py-1">
-								Menyelenggarakan pendidikan bidang psikologi untuk
-								menghasilkan lulusan yang mandiri dalam bekerja ataupun
-								untuk berwirausaha.
-							</li>
-							<li class="py-1">
-								Membentuk pribadi yang unggul dengan menjunjung tinggi
-								semangat jiwa kebangsaan di tengah masyarakat
-								multikultur.
-							</li>
-						</ol>
-					</div>
-
-					<div class="mt-4 mb-28">
-						<h1 class="font-bold text-xl">Tujuan</h1>
-						<ol class="list-decimal list-outside px-6 py-4">
-							<li class="py-1">
-								Mempersiapkan mahasiswa untuk menjadi sarjana teknik
-								yang profesional dan mampu beriwirausaha
-							</li>
-							<li class="py-1">
-								Terciptanya lulusan agar menjadi anggota masyarakat yang
-								memiliki kemampuan akademik dan profesional dalam
-								mengembangkan ilmu pengetahuan
-							</li>
-							<li class="py-1">
-								Berkembang dan tersebarluasnya ilmu pengetahuan serta
-								penggunaanya untuk meningkatkan Kesejahteraan Masyarakat
-							</li>
-						</ol>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer-component />
 	</body>
 </html>
