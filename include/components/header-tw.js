@@ -114,7 +114,7 @@ headerTemplate.innerHTML = `
                         class="mega-menu mb-16 sm:mb-0 shadow-xl bg-red-900"
                      >
                         <div
-                           class="container mx-auto w-full flex flex-wrap mx-2 px-10"
+                           class="container mx-auto w-full flex flex-wrap mx-2 px-10 py-5"
                         >
                            <ul
                               class="px-4 w-full sm:w-1/2 lg:w-1/4 pb-6 pt-6 lg:pt-3"

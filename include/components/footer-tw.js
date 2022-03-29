@@ -2,7 +2,7 @@ const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
    <footer class="mt-20 text-white" style="background-color: #c21c14">
-      <div class="pt-12 pb-16 mx-12 2xl:px-56">
+      <div class="pt-12 pb-16 mx-12 2xl:px-48">
          <div class="flex flex-wrap lg:flex-nowrap">
             <div class="max-w-xs py-2">
                <div class="mb-2">
@@ -44,7 +44,7 @@ footerTemplate.innerHTML = `
                            />
                         </svg>
                      </a>
-                     <a href="https://www.facebook.com/" target="_blank">
+                     <a href="https://www.twitter.com/" target="_blank">
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
                            width="30"
@@ -92,8 +92,8 @@ footerTemplate.innerHTML = `
                   </div>
                </div>
             </div>
-            <div 
-               class="md:ml-14 flex flex-wrap md:justify-evenly md:space-x-5"
+            <div
+               class="md:ml-14 flex flex-col md:flex-row md:justify-evenly md:space-x-5"
             >
                <div class="w-40 py-2">
                   <h4 class="title-font text-xl font-semibold mb-2">
@@ -103,25 +103,25 @@ footerTemplate.innerHTML = `
                      class="text-sm font-light space-y-1 list-none list-footer"
                   >
                      <li>
-                        <a href="">Fakultas Teknik</a>
+                        <a href="ft-home.html">Fakultas Teknik</a>
                      </li>
                      <li>
-                        <a href="">Fakultas Isipol</a>
+                        <a href="isipol-home.html">Fakultas Isipol</a>
                      </li>
                      <li>
-                        <a href="">Fakultas Hukum</a>
+                        <a href="fh-home.html">Fakultas Hukum</a>
                      </li>
                      <li>
-                        <a href="">Fakultas Ekonomi</a>
+                        <a href="ekonomi-home.html">Fakultas Ekonomi</a>
                      </li>
                      <li>
-                        <a href="">Fakultas Pertanian</a>
+                        <a href="pertanian-home.html">Fakultas Pertanian</a>
                      </li>
                      <li>
-                        <a href="">Fakultas Psikologi</a>
+                        <a href="psikologi-home.html">Fakultas Psikologi</a>
                      </li>
                      <li>
-                        <a href="">Magister Manajemen</a>
+                        <a href="mm-home.html">Magister Manajemen</a>
                      </li>
                   </nav>
                </div>
@@ -225,7 +225,7 @@ footerTemplate.innerHTML = `
                <nav
                   class="flex lg:flex-row flex-col items-center text-base font-light justify-center"
                >
-                  <p>Copyright © 2022 Universitas 17 Agustus 1945</p>
+                  <p>Copyright © 2021 Analystic Max</p>
                </nav>
             </div>
          </div>
